@@ -2,17 +2,21 @@ function sumSalary(salaries) {
 
   let sum =[];
 
-  for (s in salaries){
+  for (let s in salaries){
   
-  // console.log(salaries[s])
-  
+ 
   if (typeof salaries[s]=='number') {
   
-    sum.push(salaries[s]);
+  if ((isFinite(salaries[s]))){
+  
+     sum.push(salaries[s]);
+  }
   }
   
   }
   
-  return sum.reduce((a, b)=> a+b)
+  if (sum.length!==0) return sum.reduce((a, b)=> a+b)
+
+return 0;
 
 }
