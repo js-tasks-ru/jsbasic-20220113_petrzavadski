@@ -4,7 +4,7 @@ let arr = [];
 
 str.split(' ').forEach(item=> {
     
-   if (isFinite(item) && (item)) arr.push(item*1) 
+   if (isFinite(item) && (item)) arr.push(+item) 
   
   });
   
